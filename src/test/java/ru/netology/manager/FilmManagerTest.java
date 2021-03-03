@@ -76,7 +76,7 @@ public class FilmManagerTest {
         manager.add(eleventh);
 
         PurchaseFilm[] actual = manager.getAll();
-        PurchaseFilm[] expected = new PurchaseFilm[]{eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, null};
+        PurchaseFilm[] expected = new PurchaseFilm[]{eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
 
         assertArrayEquals(expected, actual);
     }
@@ -98,7 +98,7 @@ public class FilmManagerTest {
         manager.add(eleventh);
 
         PurchaseFilm[] actual = manager.getAll();
-        PurchaseFilm[] expected = new PurchaseFilm[]{eleventh, tenth, ninth, eighth, seventh, null, null, null, null, null, null};
+        PurchaseFilm[] expected = new PurchaseFilm[]{eleventh, tenth, ninth, eighth, seventh};
 
         assertArrayEquals(expected, actual);
     }

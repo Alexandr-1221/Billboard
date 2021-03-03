@@ -25,23 +25,14 @@ public class FilmManager {
   }
 
   public PurchaseFilm[] getAll() {
-    PurchaseFilm[] result = new PurchaseFilm[films.length];
-    // перебираем массив в прямом порядке
-    // но кладём в результаты в обратном
-    if (films.length < maxLength){
-      for (int i = 0; i < films.length; i++) {
-        int index = films.length - i - 1;
-        result[i] = films[index];
-      }
-      return result;
-    }
-    else {
-      for (int i = 0; i < maxLength; i++) {
-        int index = films.length - i - 1;
+    int indexMax;
+    indexMax = Math.min(maxLength, films.length);
+    PurchaseFilm[] result = new PurchaseFilm[indexMax];
+      for (int i = 0; i < indexMax; i++) {
+        int index;
+        index = films.length - i - 1;
         result[i] = films[index];
       }
       return result;
     }
   }
-
-}
